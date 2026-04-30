@@ -16,6 +16,11 @@ jobs:
       - name: Checkout del repositorio
         uses: actions/checkout@v4
 
+      # --- Paso agregado para corregir el error ---
+      - name: Crear red
+        run: docker network create dokploy-network
+      # --------------------------------------------
+
       - name: Validar configuracion de Docker Compose
         run: docker compose config
 
