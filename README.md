@@ -1,4 +1,4 @@
-##Resumen del Proyecto##
+**Resumen del Proyecto**
 
 En este ejercicio construí una API de Mini Inventario utilizando Docker. Básicamente, lo que hace el proyecto es organizar dos servicios para que trabajen juntos sin que yo tenga que instalar bases de datos o librerías complicadas directamente en mi computadora.
 
@@ -8,7 +8,7 @@ La API (Node.js/Express): Es el "cerebro". Se encarga de recibir las peticiones 
 
 La Base de Datos (MySQL): Es donde se guarda toda la información de los productos (como el ID, nombre y precio).
 
-##Lo que Aprendi de este Proyecto##
+**Lo que Aprendi de este Proyecto**
 
 Para que esto funcionara, usé Docker Compose, que me sirvió como un "director de orquesta". Aprendí que:
 
@@ -18,6 +18,6 @@ Para que la API y MySQL se pudieran hablar, los conecté a una red virtual llama
 
 Usé un Dockerfile para darle las instrucciones a Docker de cómo preparar el entorno de Node.js, copiar mi código e instalar lo necesario.
 
-##Mi experiencia con CI (GitHub Actions)##
+**Mi experiencia con CI (GitHub Actions)**
 
 Algo nuevo para mí fue configurar el Pipeline de GitHub Actions. Al principio me dio errores porque me faltaba crear la red en el servidor de GitHub, pero una vez que lo corregí, entendí que esto sirve para avisarme automáticamente si mi código está "sano" y listo para usarse antes de mandarlo al servidor del profe.
