@@ -19,3 +19,5 @@ Para que la API y MySQL se pudieran hablar, los conecté a una red virtual llama
 Usé un Dockerfile para darle las instrucciones a Docker de cómo preparar el entorno de Node.js, copiar mi código e instalar lo necesario.
 
 ##Mi experiencia con CI (GitHub Actions)##
+
+Algo nuevo para mí fue configurar el Pipeline de GitHub Actions. Al principio me dio errores porque me faltaba crear la red en el servidor de GitHub, pero una vez que lo corregí, entendí que esto sirve para avisarme automáticamente si mi código está "sano" y listo para usarse antes de mandarlo al servidor del profe.
