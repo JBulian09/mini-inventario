@@ -1,0 +1,34 @@
+services:
+  api:
+    build: ./api
+    expose:
+      - "3000"
+    environment:
+      - DB_HOST=mysql
+      - DB_USER=root
+      - DB_PASSWORD=root
+      - DB_NAME=inventario
+    depends_on:
+      - mysql
+    networks:
+      - default
+      - dokploy-network
+
+  mysql:
+    image: mysql:8.0
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=inventario
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./mysql/init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - default
+
+volumes:
+  mysql_data:
+
+networks:
+  default:
+  dokploy-network:
+    external: true
